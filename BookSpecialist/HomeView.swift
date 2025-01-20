@@ -46,14 +46,44 @@ struct HomeView: View {
             
             TabView(selection: $currentWeekIndex) {
                 ForEach(weekData.indices, id: \.self) { index in
-                    WeekView(week: weekData[index], currentDate: $currentDate)
+                    WeekView(week: weekData[index], currentDate: $currentDate, showWeek: $showWeek)
                 }
+                .background {
+                    GeometryReader { proxy in
+                        let minX: CGFloat = proxy.frame(in: .global).minX
+                        
+                        Color.clear
+                            .preference(key: OffsetKey.self, value: minX)
+                            .onPreferenceChange(OffsetKey.self) { value in
+                                if value.rounded() == 15 && showWeek {
+                                    leafPagWeek()
+                                }
+                            }
+                    }
+                }
+                
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(height: 100)
         }
         .padding()
     }
+    
+    func leafPagWeek() {
+        if weekData.indices.contains(currentWeekIndex) {
+            if let firstDate = weekData[currentWeekIndex].first?.date, currentWeekIndex == 0 {
+                weekData.insert(firstDate.fetchPreviousWeekDays(), at: 0)
+                weekData.removeLast()
+                currentWeekIndex = 1
+            }
+            
+            if let lastDate = weekData[currentWeekIndex].last?.date, currentWeekIndex == weekData.count - 1 {
+                weekData.append(lastDate.fetchNextWeekDays())
+                currentWeekIndex = weekData.count - 2
+            }
+        }
+    }
+    
 }
 
 #Preview {

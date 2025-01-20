@@ -11,6 +11,7 @@ struct WeekView: View {
     
     var week: [Date.WeekDay]
     @Binding var currentDate: Date
+    @Binding var showWeek: Bool
     
     var body: some View {
         HStack(spacing: 0) {
@@ -51,5 +52,5 @@ struct WeekView: View {
 }
 
 #Preview {
-    WeekView(week: [.init(date: Date())], currentDate: .constant(Date.now))
+    WeekView(week: [.init(date: Date())], currentDate: .constant(Date.now), showWeek: .constant(true))
 }
