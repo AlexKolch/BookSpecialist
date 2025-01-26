@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Вика-на-сайт.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
