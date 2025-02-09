@@ -11,7 +11,7 @@ import SwiftUI
 struct BookSpecialistApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouteView()
                 .preferredColorScheme(.light)
         }
     }
