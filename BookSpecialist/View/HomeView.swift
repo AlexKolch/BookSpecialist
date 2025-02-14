@@ -13,6 +13,9 @@ struct HomeView: View {
     @State private var currentWeekIndex: Int = 1
     @State private var showWeek: Bool = true
     @State private var weekData: [[Date.WeekDay]] = []
+    @State private var showProfileView: Bool = false
+    @State private var name: String = ""
+    @State private var phoneNumber: String = ""
     
     //MARK: Week properties
     @Namespace private var animation
@@ -42,6 +45,60 @@ struct HomeView: View {
             if let lastDate = currentWeek.last?.date {
                 weekData.append(lastDate.fetchNextWeekDays()) //будущая
             }
+        }
+        .overlay {
+            if showProfileView {
+                Rectangle()
+                    .fill(.black.opacity(0.78))
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        showProfileView = false
+                    }
+            }
+        }
+        .overlay {
+            VStack(spacing: 45) {
+                VStack(spacing: 27) {
+                    TextField("Ваше имя", text: $name)
+                        .padding(.top, 109)
+                        .font(.title.bold())
+                        .padding(.bottom, -16) //компенсируем spacing, поднимая нижний отступ
+                    LeafTextField(isSecure: false, placeholder: "Ваш телефон", text: $phoneNumber)
+                    Text("Ближайшие записи:").font(.caption.bold()).padding(.bottom, -16)
+                    TabView {
+                        
+                    }
+                    .frame(height: 75)
+                    .background(.greenBG)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .tabViewStyle(.page)
+                    .tint(.selectedDate)
+                    LeafButton(title: "История записей") {
+                        //TODO
+                    }
+                }
+                .padding(.horizontal, 37)
+                .padding(.bottom, 40)
+                .background(.white)
+                .clipShape(.rect(cornerRadii: .init(topLeading: 24, bottomLeading: 0, bottomTrailing: 48, topTrailing: 80)))
+                .overlay(alignment: .top) {
+                    Image(.avatar)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 164, height: 164)
+//                        .clipShape(.circle)
+                        .padding(11)
+                        .background(Circle().fill(.white))
+                        .offset(y: -93)
+                }
+                .padding(.horizontal, 21) //прозрачный отступ относительно краев экрана
+                
+                Button("Выйти из аккаунта") {
+                    //TODO
+                }.foregroundStyle(.red)
+            }
+            .offset(y: showProfileView ? 0 : 1000)
+            .animation(.easeInOut, value: showProfileView)
         }
     }
     
@@ -81,6 +138,9 @@ struct HomeView: View {
                 .frame(width: 62, height: 62)
                 .scaledToFill()
                 .offset(x: -19)
+                .onTapGesture {
+                    showProfileView = true
+                }
         }
     }
     
