@@ -16,6 +16,7 @@ struct RouteView: View {
     
     @State private var observed = Observed()
     
+    //Направляем сост приложения на аутентификацию, либо на домашний экран
     var body: some View {
         if observed.appState == .unAuthorized {
             AuthView(routeObserved: observed)

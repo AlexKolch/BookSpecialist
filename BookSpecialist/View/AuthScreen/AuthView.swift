@@ -13,6 +13,7 @@ struct AuthView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     @Bindable var routeObserved: RouteView.Observed
+    @State private var observed: Observed = Observed()
     
     var body: some View {
         VStack(spacing: 12.0) {
@@ -34,8 +35,13 @@ struct AuthView: View {
             }
             
             LeafButton(title: isAuth ? "Войти" : "Присоединиться") {
-                //TODO - change state app
-                routeObserved.appState = .authorized
+                //MARK: Authorization
+                if isAuth {
+                    observed.login(email: self.email, password: self.password)
+                } else {
+                    observed.register(email: self.email, password: self.password, confirmPassword: self.confirmPassword)
+                }
+                routeObserved.appState = .authorized //устанавливает сост app в авторизованное
             }
             .padding(.bottom, 9)
             
