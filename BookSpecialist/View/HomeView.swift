@@ -28,7 +28,7 @@ struct HomeView: View {
             //MARK: TimesSlots
             ScrollView {
                 VStack(spacing: 19.0) {
-                    ForEach(Timeslot.mackdata) { slot in
+                    ForEach(TimeSlot.mackdata) { slot in
                         TimeSlot_Cell(observed: .init(timeslot: slot))
                     }
                 }

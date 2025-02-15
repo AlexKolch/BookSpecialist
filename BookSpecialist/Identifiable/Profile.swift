@@ -35,7 +35,7 @@ final class Profile: Identifiable {
 
 extension Profile {
     var representation: [String: Any] {
-        var representation: [String: Any] = [
+        let representation: [String: Any] = [
             "id": id,
             "name": name,
             "email": email,

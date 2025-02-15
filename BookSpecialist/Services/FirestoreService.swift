@@ -11,9 +11,9 @@ actor FirestoreService {
     static let shared = FirestoreService(); private init() {}
     let bdLink = Firestore.firestore()
     
-    var profilesCollection: CollectionReference {
-        bdLink.collection("profiles") //ccылка на профайлы в коллекции БД
-    }
+    var profilesCollection: CollectionReference { bdLink.collection("profiles") } //ccылка на коллекцию профайлов в БД
+    var slotsCollection: CollectionReference { bdLink.collection("slots") } //ссылка на слоты
+    var mastersCollection: CollectionReference { bdLink.collection("masters") } //ссылка на мастеров
     
     //MARK: Create profile
     func createProfile(_ profile: Profile) async throws -> Profile {
@@ -33,6 +33,27 @@ actor FirestoreService {
         }
         
         return profile
+    }
+    
+    //MARK: Getting master's slots
+    func getSlotsbyMasterId(_ masterId: String) async throws -> [TimeSlot] {
+        let documentSnapshot = try await slotsCollection.whereField("masterId", isEqualTo: masterId).getDocuments()
+        
+        let documents = documentSnapshot.documents
+        let slots = documents.compactMap { doc in
+            TimeSlot(snap: doc)
+        }
+        return slots
+    }
+    
+    //MARK: Getting master
+    func getMaster(byId: String) async throws -> Master {
+        let documentSnapshot = try await mastersCollection.document(byId).getDocument()
+        guard let representation = documentSnapshot.data() else {
+            throw FirestoreError.dataNotFound
+        }
+        guard let master = Master(dictionary: representation) else { throw FirestoreError.wrongDataFormat}
+        return master
     }
     
     enum FirestoreError: Error {

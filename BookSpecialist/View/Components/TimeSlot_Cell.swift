@@ -30,7 +30,7 @@ extension TimeSlot_Cell {
     
     @Observable
     class Observed {
-        var timeslot: Timeslot
+        var timeslot: TimeSlot
         
         var timeLabel: String {
             "\(self.timeslot.date.formatted(date: .omitted, time: .shortened)) - \(self.timeslot.endDate.formatted(date: .omitted, time: .shortened))"
@@ -41,7 +41,7 @@ extension TimeSlot_Cell {
                 return "Время свободно!"
             }
             
-            if timeslot.clientId == Timeslot.mockUserId {
+            if timeslot.clientId == TimeSlot.mockUserId {
                 return "Вы записаны на это время!"
             }
             return "Время занято"
@@ -51,10 +51,10 @@ extension TimeSlot_Cell {
             if timeslot.clientId == nil {
                 return .greenBG
             }
-            return timeslot.clientId == Timeslot.mockUserId ? .yellowBG : .redBG
+            return timeslot.clientId == TimeSlot.mockUserId ? .yellowBG : .redBG
         }
         
-        init(timeslot: Timeslot) {
+        init(timeslot: TimeSlot) {
             self.timeslot = timeslot
         }
     }
@@ -63,5 +63,5 @@ extension TimeSlot_Cell {
 
 #Preview {
     TimeSlot_Cell(observed: .init(timeslot:
-            .init(masterId: Timeslot.mockMasterId, date: .now)))
+            .init(masterId: TimeSlot.mockMasterId, date: .now)))
 }
