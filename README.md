@@ -7,8 +7,9 @@ Master booking service.
  
 * SwiftUI
 * IVO Architecture
-* SwiftData
 * Firebase
 
 ---
-![Image alt](https://github.com/AlexKolch/BookSpecialist/blob/main/Screen/Simulator-Screenshot1.jpg)
+![Image alt](https://github.com/AlexKolch/BookSpecialist/blob/main/Screen/Simulator1.jpg)
+![Image alt](https://github.com/AlexKolch/BookSpecialist/blob/main/Screen/Simulator2.jpg)
+![Image alt](https://github.com/AlexKolch/BookSpecialist/blob/main/Screen/Simulator3.jpg)
