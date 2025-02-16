@@ -25,7 +25,7 @@ class TimeSlot: Identifiable {
     init?(snap: QueryDocumentSnapshot) {
         let data = snap.data()
         guard let id = data["id"] as? String,
-              let masterId = data["masterId"] as? String,
+              let masterId = data["masterID"] as? String,
               let timestamp = data["date"] as? Timestamp,
               let endTimestamp = data["endDate"] as? Timestamp
         else { return nil }

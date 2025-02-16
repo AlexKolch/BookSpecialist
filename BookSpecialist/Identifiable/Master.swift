@@ -11,7 +11,7 @@ import Foundation
 final class Master: Identifiable {
     let id: String
     var name: String
-    var slots: [TimeSlot] = []
+    var slots: [TimeSlot] = [] //слоты добавляются в HomeObserved
     
     init(id: String = UUID().uuidString, name: String) {
         self.id = id

@@ -8,6 +8,10 @@
 import Foundation
 
 extension Date {
+    struct WeekDay: Identifiable {
+        let id: UUID = UUID()
+        let date: Date
+    }
     ///совпадение текущего дня
     var isToday: Bool { Calendar.current.isDateInToday(self) }
     ///совпадение текущего часа
@@ -56,9 +60,7 @@ extension Date {
         return fetchWeekDays(previousDate)
     }
     
-    struct WeekDay: Identifiable {
-        let id: UUID = UUID()
-        let date: Date
+    static func compareDays(first: Date, second: Date) -> Bool {
+        Calendar.current.compare(first, to: second, toGranularity: .day) == .orderedSame
     }
-    
 }

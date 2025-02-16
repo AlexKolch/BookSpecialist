@@ -37,7 +37,7 @@ actor FirestoreService {
     
     //MARK: Getting master's slots
     func getSlotsbyMasterId(_ masterId: String) async throws -> [TimeSlot] {
-        let documentSnapshot = try await slotsCollection.whereField("masterId", isEqualTo: masterId).getDocuments()
+        let documentSnapshot = try await slotsCollection.whereField("masterID", isEqualTo: masterId).getDocuments()
         
         let documents = documentSnapshot.documents
         let slots = documents.compactMap { doc in

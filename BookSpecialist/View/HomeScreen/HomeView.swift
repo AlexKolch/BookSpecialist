@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
-    //MARK: Week properties
-    @State private var currentDate: Date = Date()
+    //MARK: Week's properties
+//    @State private var currentDate: Date = Date()
+    @State private var observed: Observed = Observed()
     @State private var currentWeekIndex: Int = 1
     @State private var showWeek: Bool = true
     @State private var weekData: [[Date.WeekDay]] = []
+    
+    //MARK: ProfileView's properties
     @State private var showProfileView: Bool = false
     @State private var name: String = ""
     @State private var phoneNumber: String = ""
     
-    //MARK: Week properties
+    //MARK: View's properties
     @Namespace private var animation
-    @State private var showApproveView: Bool = false
+    @State private var showApprovingView: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -28,7 +31,7 @@ struct HomeView: View {
             //MARK: TimesSlots
             ScrollView {
                 VStack(spacing: 19.0) {
-                    ForEach(TimeSlot.mackdata) { slot in
+                    ForEach(observed.todaySlots) { slot in
                         TimeSlot_Cell(observed: .init(timeslot: slot))
                     }
                 }
@@ -110,7 +113,7 @@ struct HomeView: View {
             
             TabView(selection: $currentWeekIndex) {
                 ForEach(weekData.indices, id: \.self) { index in
-                    WeekView(week: weekData[index], currentDate: $currentDate, showWeek: $showWeek)
+                    WeekView(week: weekData[index], observed: observed, currentDate: $observed.currentDate, showWeek: $showWeek)
                 }
                 .background {
                     GeometryReader { proxy in
@@ -168,7 +171,7 @@ struct HomeView: View {
 private extension HomeView {
     
     var fullDateInfo: some View {
-        Text(currentDate.formatted(date: .complete, time: .omitted))
+        Text(observed.currentDate.formatted(date: .complete, time: .omitted))
             .font(.callout.weight(.semibold))
             .textScale(.secondary)
             .foregroundStyle(.numberDate)
@@ -176,9 +179,9 @@ private extension HomeView {
     
     var mainDateInfo: some View {
         HStack(spacing: 5) {
-            Text(currentDate.format(dateFormat: "MMMM"))
+            Text(observed.currentDate.format(dateFormat: "MMMM"))
                 .foregroundStyle(Color(uiColor: .systemOrange))
-            Text(currentDate.format(dateFormat: "yyyy"))
+            Text(observed.currentDate.format(dateFormat: "yyyy"))
                 .foregroundStyle(.gray)
         }
         .font(.title.bold())

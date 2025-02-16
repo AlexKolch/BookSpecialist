@@ -10,19 +10,53 @@
 		FC2534F92D5A4B59005D4A14 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FC2534F82D5A4B59005D4A14 /* FirebaseAuth */; };
 		FC2534FB2D5A4B59005D4A14 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FC2534FA2D5A4B59005D4A14 /* FirebaseFirestore */; };
 		FC2534FD2D5A4B59005D4A14 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FC2534FC2D5A4B59005D4A14 /* FirebaseStorage */; };
+		FCA476E52D60F3DB00A8A1E1 /* Date + Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476C92D60F3DB00A8A1E1 /* Date + Ext..swift */; };
+		FCA476E62D60F3DB00A8A1E1 /* OffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476CA2D60F3DB00A8A1E1 /* OffsetKey.swift */; };
+		FCA476E72D60F3DB00A8A1E1 /* View + Ext..swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476CB2D60F3DB00A8A1E1 /* View + Ext..swift */; };
+		FCA476E82D60F3DB00A8A1E1 /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476CD2D60F3DB00A8A1E1 /* Master.swift */; };
+		FCA476E92D60F3DB00A8A1E1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476CE2D60F3DB00A8A1E1 /* Profile.swift */; };
+		FCA476EA2D60F3DB00A8A1E1 /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476CF2D60F3DB00A8A1E1 /* TimeSlot.swift */; };
+		FCA476EB2D60F3DB00A8A1E1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476D32D60F3DB00A8A1E1 /* AuthService.swift */; };
+		FCA476EC2D60F3DB00A8A1E1 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476D42D60F3DB00A8A1E1 /* FirestoreService.swift */; };
+		FCA476ED2D60F3DB00A8A1E1 /* AuthObserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476D62D60F3DB00A8A1E1 /* AuthObserved.swift */; };
+		FCA476EE2D60F3DB00A8A1E1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476D72D60F3DB00A8A1E1 /* AuthView.swift */; };
+		FCA476EF2D60F3DB00A8A1E1 /* LeafButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476D92D60F3DB00A8A1E1 /* LeafButton.swift */; };
+		FCA476F02D60F3DB00A8A1E1 /* LeafTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476DA2D60F3DB00A8A1E1 /* LeafTextField.swift */; };
+		FCA476F12D60F3DB00A8A1E1 /* TimeSlot_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476DB2D60F3DB00A8A1E1 /* TimeSlot_Cell.swift */; };
+		FCA476F22D60F3DB00A8A1E1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476DD2D60F3DB00A8A1E1 /* HomeView.swift */; };
+		FCA476F32D60F3DB00A8A1E1 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476DE2D60F3DB00A8A1E1 /* WeekView.swift */; };
+		FCA476F42D60F3DB00A8A1E1 /* BookSpecialistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476E12D60F3DB00A8A1E1 /* BookSpecialistApp.swift */; };
+		FCA476F52D60F3DB00A8A1E1 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476E32D60F3DB00A8A1E1 /* RouteView.swift */; };
+		FCA476F62D60F3DB00A8A1E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA476D12D60F3DB00A8A1E1 /* Preview Assets.xcassets */; };
+		FCA476F72D60F3DB00A8A1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA476E02D60F3DB00A8A1E1 /* Assets.xcassets */; };
+		FCA476F82D60F3DB00A8A1E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA476E22D60F3DB00A8A1E1 /* GoogleService-Info.plist */; };
+		FCA476FC2D60F51100A8A1E1 /* HomeObserved.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA476FB2D60F51100A8A1E1 /* HomeObserved.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FCA216572D3BD26B0083419F /* BookSpecialist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookSpecialist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA476C92D60F3DB00A8A1E1 /* Date + Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Ext..swift"; sourceTree = "<group>"; };
+		FCA476CA2D60F3DB00A8A1E1 /* OffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetKey.swift; sourceTree = "<group>"; };
+		FCA476CB2D60F3DB00A8A1E1 /* View + Ext..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Ext..swift"; sourceTree = "<group>"; };
+		FCA476CD2D60F3DB00A8A1E1 /* Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
+		FCA476CE2D60F3DB00A8A1E1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FCA476CF2D60F3DB00A8A1E1 /* TimeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
+		FCA476D12D60F3DB00A8A1E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FCA476D32D60F3DB00A8A1E1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FCA476D42D60F3DB00A8A1E1 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		FCA476D62D60F3DB00A8A1E1 /* AuthObserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthObserved.swift; sourceTree = "<group>"; };
+		FCA476D72D60F3DB00A8A1E1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		FCA476D92D60F3DB00A8A1E1 /* LeafButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafButton.swift; sourceTree = "<group>"; };
+		FCA476DA2D60F3DB00A8A1E1 /* LeafTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafTextField.swift; sourceTree = "<group>"; };
+		FCA476DB2D60F3DB00A8A1E1 /* TimeSlot_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlot_Cell.swift; sourceTree = "<group>"; };
+		FCA476DD2D60F3DB00A8A1E1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FCA476DE2D60F3DB00A8A1E1 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		FCA476E02D60F3DB00A8A1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCA476E12D60F3DB00A8A1E1 /* BookSpecialistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSpecialistApp.swift; sourceTree = "<group>"; };
+		FCA476E22D60F3DB00A8A1E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCA476E32D60F3DB00A8A1E1 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		FCA476FB2D60F51100A8A1E1 /* HomeObserved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeObserved.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FCA216592D3BD26B0083419F /* BookSpecialist */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BookSpecialist;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FCA216542D3BD26B0083419F /* Frameworks */ = {
@@ -41,7 +75,7 @@
 		FCA2164E2D3BD26B0083419F = {
 			isa = PBXGroup;
 			children = (
-				FCA216592D3BD26B0083419F /* BookSpecialist */,
+				FCA476E42D60F3DB00A8A1E1 /* BookSpecialist */,
 				FCA216582D3BD26B0083419F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +86,98 @@
 				FCA216572D3BD26B0083419F /* BookSpecialist.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FCA476CC2D60F3DB00A8A1E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476C92D60F3DB00A8A1E1 /* Date + Ext..swift */,
+				FCA476CA2D60F3DB00A8A1E1 /* OffsetKey.swift */,
+				FCA476CB2D60F3DB00A8A1E1 /* View + Ext..swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FCA476D02D60F3DB00A8A1E1 /* Identifiable */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476CD2D60F3DB00A8A1E1 /* Master.swift */,
+				FCA476CE2D60F3DB00A8A1E1 /* Profile.swift */,
+				FCA476CF2D60F3DB00A8A1E1 /* TimeSlot.swift */,
+			);
+			path = Identifiable;
+			sourceTree = "<group>";
+		};
+		FCA476D22D60F3DB00A8A1E1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476D12D60F3DB00A8A1E1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FCA476D52D60F3DB00A8A1E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476D32D60F3DB00A8A1E1 /* AuthService.swift */,
+				FCA476D42D60F3DB00A8A1E1 /* FirestoreService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FCA476D82D60F3DB00A8A1E1 /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476D62D60F3DB00A8A1E1 /* AuthObserved.swift */,
+				FCA476D72D60F3DB00A8A1E1 /* AuthView.swift */,
+			);
+			path = AuthScreen;
+			sourceTree = "<group>";
+		};
+		FCA476DC2D60F3DB00A8A1E1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476D92D60F3DB00A8A1E1 /* LeafButton.swift */,
+				FCA476DA2D60F3DB00A8A1E1 /* LeafTextField.swift */,
+				FCA476DB2D60F3DB00A8A1E1 /* TimeSlot_Cell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FCA476DF2D60F3DB00A8A1E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476D82D60F3DB00A8A1E1 /* AuthScreen */,
+				FCA476FA2D60F4CC00A8A1E1 /* HomeScreen */,
+				FCA476DC2D60F3DB00A8A1E1 /* Components */,
+				FCA476DE2D60F3DB00A8A1E1 /* WeekView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCA476E42D60F3DB00A8A1E1 /* BookSpecialist */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476E12D60F3DB00A8A1E1 /* BookSpecialistApp.swift */,
+				FCA476E32D60F3DB00A8A1E1 /* RouteView.swift */,
+				FCA476CC2D60F3DB00A8A1E1 /* Helpers */,
+				FCA476D52D60F3DB00A8A1E1 /* Services */,
+				FCA476D02D60F3DB00A8A1E1 /* Identifiable */,
+				FCA476DF2D60F3DB00A8A1E1 /* View */,
+				FCA476E02D60F3DB00A8A1E1 /* Assets.xcassets */,
+				FCA476E22D60F3DB00A8A1E1 /* GoogleService-Info.plist */,
+				FCA476D22D60F3DB00A8A1E1 /* Preview Content */,
+			);
+			path = BookSpecialist;
+			sourceTree = "<group>";
+		};
+		FCA476FA2D60F4CC00A8A1E1 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FCA476DD2D60F3DB00A8A1E1 /* HomeView.swift */,
+				FCA476FB2D60F51100A8A1E1 /* HomeObserved.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +194,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FCA216592D3BD26B0083419F /* BookSpecialist */,
 			);
 			name = BookSpecialist;
 			packageProductDependencies = (
@@ -124,6 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA476F62D60F3DB00A8A1E1 /* Preview Assets.xcassets in Resources */,
+				FCA476F72D60F3DB00A8A1E1 /* Assets.xcassets in Resources */,
+				FCA476F82D60F3DB00A8A1E1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +260,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA476E52D60F3DB00A8A1E1 /* Date + Ext..swift in Sources */,
+				FCA476E62D60F3DB00A8A1E1 /* OffsetKey.swift in Sources */,
+				FCA476E72D60F3DB00A8A1E1 /* View + Ext..swift in Sources */,
+				FCA476E82D60F3DB00A8A1E1 /* Master.swift in Sources */,
+				FCA476FC2D60F51100A8A1E1 /* HomeObserved.swift in Sources */,
+				FCA476E92D60F3DB00A8A1E1 /* Profile.swift in Sources */,
+				FCA476EA2D60F3DB00A8A1E1 /* TimeSlot.swift in Sources */,
+				FCA476EB2D60F3DB00A8A1E1 /* AuthService.swift in Sources */,
+				FCA476EC2D60F3DB00A8A1E1 /* FirestoreService.swift in Sources */,
+				FCA476ED2D60F3DB00A8A1E1 /* AuthObserved.swift in Sources */,
+				FCA476EE2D60F3DB00A8A1E1 /* AuthView.swift in Sources */,
+				FCA476EF2D60F3DB00A8A1E1 /* LeafButton.swift in Sources */,
+				FCA476F02D60F3DB00A8A1E1 /* LeafTextField.swift in Sources */,
+				FCA476F12D60F3DB00A8A1E1 /* TimeSlot_Cell.swift in Sources */,
+				FCA476F22D60F3DB00A8A1E1 /* HomeView.swift in Sources */,
+				FCA476F32D60F3DB00A8A1E1 /* WeekView.swift in Sources */,
+				FCA476F42D60F3DB00A8A1E1 /* BookSpecialistApp.swift in Sources */,
+				FCA476F52D60F3DB00A8A1E1 /* RouteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

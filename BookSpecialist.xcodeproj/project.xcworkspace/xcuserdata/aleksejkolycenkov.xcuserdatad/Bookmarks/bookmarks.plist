@@ -25,6 +25,119 @@
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>BookSpecialist/View/HomeScreen/HomeObserved.swift</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>DVTDocumentLocation</string>
+			</dict>
+			<key>title</key>
+			<string>установка слотов для мастера</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>56</string>
+					<key>EndingLineNumber</key>
+					<string>45</string>
+					<key>StartingColumnNumber</key>
+					<string>31</string>
+					<key>StartingLineNumber</key>
+					<string>45</string>
+					<key>Timestamp</key>
+					<string>761386864.072134</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>BookSpecialist/View/WeekView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string> observed.getTodaySlots()</string>
+				<key>leading</key>
+				<string>                            withAnimation {
+                                currentDate = weekDay.date
+                               </string>
+				<key>trailing</key>
+				<string>
+                            }
+                        }
+</string>
+			</dict>
+			<key>title</key>
+			<string>получаем слоты по каждому дню</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>128</string>
+					<key>EndingLineNumber</key>
+					<string>115</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>115</string>
+					<key>Timestamp</key>
+					<string>761392636.412074</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>BookSpecialist/View/HomeScreen/HomeView.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>                    WeekView(week: weekData[index], observed: observed, currentDate: $observed.currentDate, showWeek: $showWeek)</string>
+				<key>leading</key>
+				<string>            TabView(selection: $currentWeekIndex) {
+                ForEach(weekData.indices, id: \.self) { index in
+</string>
+				<key>trailing</key>
+				<string>
+                }
+                .background {
+</string>
+			</dict>
+			<key>title</key>
+			<string>WeekView</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
 	</array>
 </dict>
 </plist>

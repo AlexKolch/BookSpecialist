@@ -10,6 +10,7 @@ import SwiftUI
 struct WeekView: View {
     
     var week: [Date.WeekDay]
+    var observed: HomeView.Observed //Вместо обертки @ObservedObject
     @Binding var currentDate: Date
     @Binding var showWeek: Bool
     
@@ -42,6 +43,7 @@ struct WeekView: View {
                         .onTapGesture {
                             withAnimation {
                                 currentDate = weekDay.date
+                                observed.getTodaySlots()
                             }
                         }
                 }
@@ -52,5 +54,5 @@ struct WeekView: View {
 }
 
 #Preview {
-    WeekView(week: [.init(date: Date())], currentDate: .constant(Date.now), showWeek: .constant(true))
+    WeekView(week: [.init(date: Date())], observed: HomeView.Observed(), currentDate: .constant(Date.now), showWeek: .constant(true))
 }
