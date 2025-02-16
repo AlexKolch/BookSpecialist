@@ -25,7 +25,7 @@ struct RouteView: View {
         } else {
             HomeView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.BG)
+                .background(.grayBG)
         }
     }
 }

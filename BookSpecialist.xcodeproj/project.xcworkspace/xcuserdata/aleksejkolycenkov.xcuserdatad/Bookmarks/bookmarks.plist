@@ -98,15 +98,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>128</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>115</string>
+					<string>133</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>115</string>
+					<string>132</string>
 					<key>Timestamp</key>
-					<string>761392636.412074</string>
+					<string>761414870.173476</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -122,19 +122,66 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>                    WeekView(week: weekData[index], observed: observed, currentDate: $observed.currentDate, showWeek: $showWeek)</string>
+				<string>                    WeekView(week: weekData[index], observed: observed, currentDate: $observed.currentDate, showWeek: $showWeek)
+</string>
 				<key>leading</key>
 				<string>            TabView(selection: $currentWeekIndex) {
                 ForEach(weekData.indices, id: \.self) { index in
 </string>
 				<key>trailing</key>
-				<string>
-                }
+				<string>                }
                 .background {
+                    GeometryReader { proxy in
 </string>
 			</dict>
 			<key>title</key>
 			<string>WeekView</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>71</string>
+					<key>EndingLineNumber</key>
+					<string>62</string>
+					<key>StartingColumnNumber</key>
+					<string>5</string>
+					<key>StartingLineNumber</key>
+					<string>62</string>
+					<key>Timestamp</key>
+					<string>761412167.406965</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>BookSpecialist/Services/FirestoreService.swift</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>   try await slotsCollection.document(timeSlot.id).setData(repres)</string>
+				<key>leading</key>
+				<string>        var repres = timeSlot.representation
+        repres["clientID"] = clientID //создаем новое поле данных в FB
+     </string>
+				<key>trailing</key>
+				<string>
+    }
+    
+</string>
+			</dict>
+			<key>title</key>
+			<string>отправляем в FB обновленные данные</string>
 			<key>type</key>
 			<string>bookmark</string>
 		</dict>

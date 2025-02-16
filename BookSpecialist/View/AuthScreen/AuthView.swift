@@ -17,14 +17,16 @@ struct AuthView: View {
     
     var body: some View {
         VStack(spacing: 12.0) {
-            Image(.logo)
+            Image(systemName: "calendar.badge.checkmark")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 140)
-                .clipShape(.circle)
-            Text("Book your specialist")
+                .foregroundStyle(.selectedDate)
+                .symbolEffect(.pulse)
+                .offset(x: 16)
+            Text("Book your master")
                 .font(.title).bold()
-                .foregroundStyle(.white)
+                .foregroundStyle(.black)
                 .padding(.top, 27)
                 .padding(.bottom, 14)
             

@@ -47,6 +47,14 @@ extension HomeView {
                 }
             }
         }
+        
+        ///запись клиента
+        func book(slot: TimeSlot, clientID: String) {
+            Task {
+                try await FirestoreService.shared.booking(timeSlot: slot, clientID: clientID)
+                fetchData(userId: currentUser!.id, masterID: currentMaster!.id)
+            }
+        }
     }
     
 }

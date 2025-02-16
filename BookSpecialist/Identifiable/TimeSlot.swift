@@ -43,6 +43,20 @@ class TimeSlot: Identifiable {
 }
 
 extension TimeSlot {
+    //для конвертации данных слота обратно в [String: Any] в Firestore
+    var representation: [String: Any] {
+        return [
+            "id": id,
+            "masterID": masterId,
+            "date": Timestamp(date: date),
+            "endDate": Timestamp(date: endDate)
+        ]
+    }
+}
+
+
+//MARK: Mock data
+extension TimeSlot {
     static let mockMasterId: String = "1"
     static let mockUserId: String = UUID().uuidString
     static let mackdata: [TimeSlot] = [

@@ -56,6 +56,13 @@ actor FirestoreService {
         return master
     }
     
+    //MARK: Booking TimeSlot
+    func booking(timeSlot: TimeSlot, clientID: String) async throws {
+        var repres = timeSlot.representation
+        repres["clientID"] = clientID //создаем новое поле данных в FB
+        try await slotsCollection.document(timeSlot.id).setData(repres)
+    }
+    
     enum FirestoreError: Error {
         case dataNotFound
         case wrongDataFormat
